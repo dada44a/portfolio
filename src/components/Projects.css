@@ -1,0 +1,209 @@
+/* ─── Projects section ───────────────────────────────────────── */
+.projects {
+  padding: var(--section-py) 0;
+  background: var(--bg-secondary);
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+/* ─── Project Card ───────────────────────────────────────────── */
+.project-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--trans-med);
+}
+.project-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+}
+.project-card--featured {
+  border-color: rgba(0, 212, 255, 0.2);
+}
+.project-card--featured:hover {
+  border-color: var(--blue);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.4), var(--glow-blue);
+}
+
+/* Preview area */
+.project-card__preview {
+  position: relative;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 20px;
+  overflow: hidden;
+}
+.project-card__preview::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(1px);
+}
+
+.projects__filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+.projects__filter-btn {
+  padding: 8px 18px;
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.86rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--trans-fast);
+}
+
+.projects__filter-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--border-hover);
+}
+
+.projects__filter-btn.active {
+  background: var(--grad-blue);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.25);
+}
+
+.project-card__featured-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(0,212,255,0.15);
+  border: 1px solid rgba(0,212,255,0.3);
+  border-radius: 99px;
+  padding: 4px 12px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--blue);
+}
+
+.project-card__internship-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(139, 92, 246, 0.15);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 99px;
+  padding: 4px 12px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--purple);
+}
+
+.project-card__window-dots {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: flex;
+  gap: 6px;
+}
+.project-card__window-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+}
+.project-card__window-dots span:nth-child(1) { background: #ff5f57; }
+.project-card__window-dots span:nth-child(2) { background: #febc2e; }
+.project-card__window-dots span:nth-child(3) { background: #28c840; }
+
+.project-card__preview-inner {
+  position: relative;
+  z-index: 1;
+}
+.project-card__preview-title {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+}
+
+/* Card body */
+.project-card__body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.project-card__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.project-card__desc {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  line-height: 1.7;
+  flex: 1;
+}
+
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.project-card__tag {
+  padding: 4px 10px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+}
+
+.project-card__links {
+  display: flex;
+  gap: 10px;
+  padding-top: 4px;
+}
+.project-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  transition: all var(--trans-fast);
+}
+.project-card__link:hover {
+  color: var(--text-primary);
+  border-color: var(--border-hover);
+}
+.project-card__link--primary {
+  background: rgba(0,212,255,0.1);
+  border-color: rgba(0,212,255,0.25);
+  color: var(--blue);
+}
+.project-card__link--primary:hover {
+  background: rgba(0,212,255,0.18);
+  box-shadow: 0 0 20px rgba(0,212,255,0.2);
+}
+
+@media (max-width: 640px) {
+  .projects__grid { grid-template-columns: 1fr; }
+}
+

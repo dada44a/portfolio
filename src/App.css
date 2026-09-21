@@ -1,0 +1,5 @@
+/* App wrapper — let sections handle their own layout */
+#root {
+  position: relative;
+  z-index: 1;
+}

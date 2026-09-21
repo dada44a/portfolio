@@ -1,0 +1,117 @@
+/* ─── References section ─────────────────────────────────────── */
+.references {
+  padding: var(--section-py) 0;
+}
+
+.references__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* ─── Reference card ─────────────────────────────────────────── */
+.ref-card {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--trans-med);
+  border-top: 2px solid var(--ref-color, var(--blue));
+}
+
+.ref-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35), 0 0 30px color-mix(in srgb, var(--ref-color, var(--blue)) 18%, transparent);
+  border-color: var(--ref-color, var(--blue));
+}
+
+.ref-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, color-mix(in srgb, var(--ref-color, var(--blue)) 8%, transparent), transparent 70%);
+  pointer-events: none;
+}
+
+.ref-card__header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ref-card__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-head);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.ref-card__name {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.25;
+  margin-bottom: 2px;
+}
+
+.ref-card__title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.ref-card__company {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.ref-card__note {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  flex: 1;
+}
+
+/* Contact options */
+.ref-card__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.ref-card__contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+  transition: all var(--trans-fast);
+}
+
+.ref-card__contact-item svg {
+  color: var(--blue);
+  flex-shrink: 0;
+}
+
+.ref-card__contact-item:hover {
+  color: var(--blue);
+  transform: translateX(2px);
+}
+
+@media (max-width: 640px) {
+  .references__grid {
+    grid-template-columns: 1fr;
+  }
+}
