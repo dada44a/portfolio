@@ -14,7 +14,7 @@ Results-driven Fullstack Developer with strong backend focus and proven internsh
 
 - **Backend & APIs:** Node.js, Express.js, Python, RESTful API Architecture, JWT Auth & RBAC, MVC Pattern, CRUD, C#, PHP, OOP Principles
 - **Databases & ORMs:** PostgreSQL, MySQL, MongoDB, SQL Query Optimization, Schema Modeling & Normalization, Transactional Locking
-- **Frontend:** React, Next.js, TypeScript, JavaScript (ES6+), Tailwind CSS, HTML5, CSS3, Responsive UI/UX, State Management
+- **Frontend:** React.js, Next.js, TypeScript, JavaScript (ES6+), Tailwind CSS, HTML5, CSS3, Responsive UI/UX, State Management
 - **Developer Tools & DevOps:** Git, GitHub, Postman, Vitest, Docker (Basics), Linux/Bash, Vercel, Agile/Scrum, Jira, Trello
 
 ---
