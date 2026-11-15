@@ -13,6 +13,7 @@ interface Project {
   featured?:   boolean;
 }
 
+
 const PROJECTS: Project[] = [
   {
     title:       'FireX 2.0',
@@ -74,7 +75,22 @@ const PROJECTS: Project[] = [
     gradient:    'linear-gradient(135deg, #fbbf2422, #ff006e22)',
     live:        'https://best-of-nepal-1j1n.vercel.app/',
   },
+  {
+    title:       'Biratnagar Metropolitan Disability ID Card',
+    category:    'internship',
+    description: 'A digital platform designed to streamline disability identity card management for Biratnagar Metropolitan City. Facilitates registration of persons with disabilities, collection and management of personal and disability-related information, application processing, and organized record keeping to improve accessibility, transparency, and efficiency in municipal service delivery.',
+    tags:        ['Government Portal', 'Digital Registration', 'PHP/Backend', 'Database Management', 'CRUD Operations', 'Public Service'],
+    gradient:    'linear-gradient(135deg, #00d4ff22, #8b5cf622)',
+  },
+  {
+    title:       'Digital Meeting',
+    category:    'internship',
+    description: 'A centralized digital meeting management system designed to streamline and track meetings across government offices. Enables officials to create and schedule meetings, manage agendas, record meeting minutes, assign action items, monitor task progress, and maintain historical meeting records. Improves interdepartmental coordination, accountability, and transparency through organized digital workflows.',
+    tags:        ['Government Web Application', 'Meeting Management', 'Task Tracking', 'Role-Based Access', 'Database Management', 'Digital Workflow'],
+    gradient:    'linear-gradient(135deg, #fbbf2422, #00ff9422)',
+  },
 ];
+
 
 type Filter = 'all' | 'internship' | 'featured';
 
